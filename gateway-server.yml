@@ -7,4 +7,11 @@ spring:
             uri: lb://BOOKING-SERVICE
             predicates:
               - Path=/api/bookings/**
-
+          - id: admin-service
+            uri: lb://ADMIN-SERVICE
+            predicates:
+              - Path=/api/admin/**
+          - id: auth-service
+            uri: lb://AUTH-SERVICE
+            predicates:
+              - Path=/api/auth/**
