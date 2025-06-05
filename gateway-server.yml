@@ -6,4 +6,11 @@ spring:
           uri: lb://auth-service
           predicates:
             - Path=/api/auth/**
-        # Add more routes as needed
+        - id: admin-service
+          uri: lb://admin-service
+          predicates:
+            - Path=/api/admin/**
+        - id: booking-service
+          uri: lb://booking-service
+          predicates:
+            - Path=/api/booking/**
