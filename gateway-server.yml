@@ -13,4 +13,4 @@ spring:
         - id: booking-service
           uri: lb://booking-service
           predicates:
-            - Path=/api/booking/**
+            - Path=/api/bookings/**
